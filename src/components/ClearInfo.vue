@@ -1,5 +1,5 @@
 <template>
-    <ion-button color="light" expand="block" v-if="info" @click="$emit('clear-info')">
+    <ion-button color="light" expand="block" v-if="info && Object.keys(info).length > 0" @click="$emit('clear-info')">
         Clear
     </ion-button>
 </template>

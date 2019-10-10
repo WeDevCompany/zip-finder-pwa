@@ -1,8 +1,8 @@
 <template>
   <div class="ion-page">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>ZipInfo</ion-title>
+      <ion-toolbar color="#ffd205">
+        <ion-title>ZipFinder</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     async getZipInfo(zip) {
-      const endpoint = new URL(encodeURI(`http://api.zippopotam.us/ES/${zip}`));
+      const endpoint = new URL(encodeURI(`https://api.zippopotam.us/ES/${zip}`));
       const resp = await fetch(endpoint.toString())
 
       if (undefined !== resp.status && resp.status == 404) {
@@ -50,3 +50,8 @@ export default {
   }
 };
 </script>
+<style>
+  .ion-page ion-toolbar {
+    background: #ffd205;
+  }
+</style>
