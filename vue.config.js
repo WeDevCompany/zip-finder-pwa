@@ -5,7 +5,7 @@ module.exports = {
             navigateFallback: '/index.html',
             runtimeCaching: [
                 {
-                    urlPattern: new RegExp('^https://api.zippopotam.us/es'),
+                    urlPattern: new RegExp('^https://api.zippopotam.us/ES/.*'),
                     handler: 'networkFirst',
                     options: {
                         networkTimeoutSeconds: 20,
@@ -19,4 +19,4 @@ module.exports = {
         }
 
     }
-}
+};
